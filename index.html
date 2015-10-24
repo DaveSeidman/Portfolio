@@ -1,0 +1,776 @@
+
+<!doctype HTML>
+<html lang="en">
+	<head>
+		<title>Dave Seidman</title>
+		<meta charset="utf-8">
+
+		<meta name="description" content="The online portfolio of Dave Seidman, Digital Designer / Developer" />
+		<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+		<!-- <link rel="stylesheet" href="css/fonts.css" type="text/css"> -->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="icon" type="image/png" href="images/favicon.ico">
+		
+		<script src="js/typedarray.js"></script>
+		<script src="js/three.min.js"></script>
+		<!-- <script src="js/BokehShader2.js"></script> -->
+
+		<script src="js/CopyShader.js"></script>
+		<script src="js/BokehShader.js"></script>
+
+		<script src="js/EffectComposer.js"></script>
+		<script src="js/RenderPass.js"></script>
+		<script src="js/ShaderPass.js"></script>
+		<script src="js/MaskPass.js"></script>
+		<script src="js/BokehPass.js"></script>
+
+
+		<!-- add IE conditional statement to load following two? -->
+		<script src="js/Projector.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+
+ 		<script src="js/jquery-2.1.4.min.js"></script>
+ 		<script src="js/DeviceOrientationControls.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/hand.min.js"></script>
+		<script src="js/simplex-noise.min.js"></script>
+		<script src="js/sound.min.js"></script>
+		<script src="js/scene.js"></script>
+
+	</head>
+
+	<body>
+
+	<div class="preload">
+		<div class="pushMiddle"></div>
+		<p>Loading...</p>
+	</div>
+
+	<div class="wrap">
+
+		<div class="whiteFade"></div>
+
+		<div class="carousel">
+
+			<div class="dot" data-model="models/sphere.js" data-foreground="38,38,38" data-background="240,240,240">
+				<div class="item intro" id="home1">					
+					<h1>Digital Designer / Developer</h1>
+					<span class="therest">
+						<a class="prevButton" href="#dev"><img src="images/prevArrow.png" alt="previous arrow">DEV PROJECTS</a>
+						<a class="nextButton" href="#design">DESIGN PROJECTS<img src="images/nextArrow.png" alt="next arrow"></a> 
+					</span>
+				</div>
+			</div> 
+
+			<div class="dot" data-model="models/camera.js" data-foreground="26,61,137" data-background="124,150,201">
+				<div class="item design" id="MotionGraphics">
+					<div class="title">
+						<h1 data-plus-offset="34">Motion Graphics</h1>
+						<h2>Nothing happens until something moves.<br><i>-Albert Einstein</i></h2>
+					</div>
+					<div class="content">
+						<div class="project openProject">
+							<div class="vimeo">
+								<iframe src="https://player.vimeo.com/video/138543110" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+							<div class="info openInfo">
+								<h1>2015 Motion Graphics Reel</h1>
+								<p>This is some recent work using mostly After Effects for 2D &amp; 3D animation as well as title cards, lower 3rds, backgrounds, etc.</p>
+								<p>I have a deep understanding of compositing, masking, tracking and rendering techniques along with 10+ years experience with Adobe's and third-party effects and plugins including Re:Vision Effects and Video Copilot's suite of tools. I often write After Effects Expressions to simplify my workflow or share home-made effects.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="dot" data-model="models/brain.js" data-foreground="200,133,164" data-background="223,175,196">
+				<div class="item design" id="DeepThoughts">
+					<div class="title">
+						<h1 data-plus-offset="40">Deep Thoughts</h1>
+						<h2>A minute of thought is greater than an hour of talk<br><i>-John Maxwell</i></h2>
+					</div>
+					<div class="content">
+
+						<div class="project" id="SonicSync">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/sonicsync1.jpg" alt="wall of phones" src="images/placeholder.png">
+								<img class="lazy" data-original="images/sonicsync2.jpg" alt="crowd at concert">
+							</div>
+							<div class="info">
+								<h1>Sonic Syncing</h1>
+								<p>An app that uses Spotify and Shazam to amplify your music across any device within listening range. After determining the song being played, the app either downloads it or locates the file in the device's local storage. It then uses precise pattern matching to determine the exact position of playback and continue monitoring it to maintain sync as it plays the same song from the same point in the timeline.</p>
+								<p>Some considerations would be to allow for the user to manually "guide" the software to the exact point in the song since it may occasionally get "confused" as to which chorus the song is playing. There's also a possibility that the sounds bleeding back into the microphone from the same device would inhibit the software's ability to maintain sync.</p>
+								<p>I'm very curious to find out what it'd be like to hear some music from hundreds of small speakers instead of the 6 of a typical surround sound setup.</p>
+							</div>
+						</div>
+						
+						<div class="project" id="HappyMap">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/happymap1.jpg" alt="smileys" src="images/placeholder.png">
+								<img class="lazy" data-original="images/happymap1.jpg" alt="smileys" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>The Happy Map</h1>
+								<p>The Happy Map! is an experiment to gauge world-wide happiness.</p>
+								<p>This interactive infographic displays a map of the world covered with data points from user responses and arranged into evenly spaced grids. Users are asked to identify their location, either manually or through browser detection, and then respond to a one question survey: "Are You Happy?"</p>
+								<p>When the map is viewed from a wide zoom, neighboring data points combine and the average amount of happy versus sad faces around that point determine whether a happy or sad face is displayed for that region. While zooming in those data points open up, revealing their component data point. Each point expanding to become 9, then those becoming 81, and so on, with every level of zoom.</p>
+								<p>There is no specific goal with this survey, just an interesting data visualization and maybe some brief viral interest.</p>
+							</div>
+						</div>
+						
+						
+						<div class="project" id="RetinaBurn">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/retinaburn1.jpg" alt="afterimage" src="images/placeholder.png">
+								<img class="lazy" data-original="images/afterimage1.jpg" alt="afterimage" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Detailed Retina Burning</h1>
+								<p>Whether you call them phosphenes or afterimages, it's possible to continue "seeing" images with your eyes closed. A good example can be observed by staring at a chandelier in a dark room for several seconds, then closing your eyes. The lights remain visible for several minutes and you can even count how many bulbs were visible even if you didn't when your eyes were open.</p>
+								<p>A more detailed image could contain words, number or symbols that the observer would like to memorize without actually having to commit them to memory</p>
+							</div>
+
+						</div>
+
+						<!-- <div class="project" id="BeforeTheEarthWasRound">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/flatland1.jpg">
+								<img class="lazy" data-original="images/flatland1.jpg">
+							</div>
+							<div class="info">
+								<h1>Before the Earth Was Round</h1>
+								<p>It's been a longtime goal of mine to work on an <a href="http://okgo.net/category/videos/" target="_blank">Okay Go video.</a> I think "Before the Earth Was Round" goes perfectly with Flatland, by Edwin Abbott.</p>
+								<p>In this concept video, which is timed out to the song, we see 2D shapes moving along a flat plane but the camera is sitting on the ground plane and pointed straight at the horizon. With a little fog, depth of field and 4 pixels of height (i cheated a little) we're able to discern when shapes are coming in and out of frame, moving towards or away from the camera, rotating, forming crowds, etc.</p>
+								<p>I added some gradients above and below to help set the mood but are simply background layers in After Effects.</p>
+							</div>
+						</div> -->
+
+						<div class="project" id="FlexPasswords">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/password1.jpg" alt="password field" src="images/placeholder.png">
+								<img class="lazy" data-original="images/password1.jpg" alt="password field" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Flexible Password Systems</h1>
+								<p>Jimmy Falon did made a <a href="https://twitter.com/jimmyfallon/status/363446746786963456" target="_blank">great point</a> when he joked, Thank you, Web site button that says “Forgot My Password,” for basically being my password.</p>
+								<p>Passwords themselves could be more flexible in some ways but more restrictive in ways that matter. For example, getting rid of case sensitivity or special characters that you require you to play finger-twister with your keyboard. Instead, let the password field passively detect some other information as you're typing. Facial recognition, fingerprint detection could be embedded into every key on the keyboard and touchscreen so instead of having to hold your thumb in one spot for a few seconds, the keyboard or screen is constantly reading all ten of your fingerprints.</p>
+								<p>There are even more metrics here as well that might not be as obvious at first such as Speed. How quickly or slowly you type, and if you oftentimes pause before entering the last character. Do you often make a mistake or two and use the backspace key? Then there are even more subtle things you can measure, like time of day and location. Is it normal for you to be logging into your bank account at 3am from Nigeria? Can you name one of the restaurants you went to last night, and use Facebook or Foursquare to verify that information.</p>
+								<p>All of this information can be combined to give you a 'Password Score', the threshold for every account can be adjusted by the user. Maybe if it's just their library account your threshold could be as low as <a href="http://www.adweek.com/socialtimes/facebook-photos-verify/243870" target="_blank">identify these three friends from facebook</a>, but if it's logging into your bank account you'll need to match your face, your fingerprints AND answer a couple difficult questions.</p>
+							</div>
+						</div>
+
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+					</div>
+				</div>
+			</div>			
+
+			<div class="dot" data-model="models/star.js" data-foreground="226,217,45" data-background="252,248,146">
+				<div class="item design" id="ASCO">
+					<div class="title">
+						<h1 data-plus-offset="80">ASCO</h1>
+						<!-- <h2>Cancer is a word, not a sentence<br><i>-John Diamon</i></h2> -->
+						<h2>Intro video for oncology conference</h2>
+						<span class="featured">FEATURED PROJECT</span>
+					</div>
+					<div class="content">
+
+						<div class="project openProject" id="ASCO_inception">
+							<div class="imgScroller openImgScroller">
+								<img class="lazy" data-original="images/asco1.jpg" alt="BMS ASCO 2012 Chicago, It all starts here." src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco2.jpg" alt="Globe with pins" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco3.jpg" alt="Bar chart building" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco4.jpg" alt="Cigarette Package / Pie Chart" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco5.jpg" alt="Number Counter" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco6.jpg" alt="Men vs. Women new cases of cancer" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco7.jpg" alt="People walking" src="images/placeholder.png">
+								<img class="lazy" data-original="images/asco8.jpg" alt="committed to discovering, developing, and delivering Innovative Medicines to help patients prevail over these serious diseases. That's Why We're Here." src="images/placeholder.png">
+							</div>
+							<div class="info openInfo">
+								<h1>6-minute animated feature</h1>
+								<p>This project came to my department without much direction. The client wanted a 1-3 minute "popcorn trivia" video that would loop in front of an audience before the client's opening ceremony at the American Society of Cancer Ongologists began.</p>
+								<p>We set out gathering facts and collecting data about Cancer, the Conference and also about Chicago, where the conference was being held. Before long we realized we could weave these facts and datapoints into a flowing story that could be played as a loop, but also watched in a linear fashion as well.</p>
+								<p>Since this project had a very short timeline, we needed a way to product it quickly. I'd been playing with Mental Ray's Ink and Paint shader recently, which is normally used to create cartoon-like renders. I experimented with turning off the line rendering and instead just let the shader give me two or three levels of color per surface. I then began modeling with this in mind. When you don't have the full range of light and shadow you're forced to setup your geometry and cameras very carefully so that the rendered object is still recognizable and stands out from its background.</p>
+								<p>It was a lot of work up front, but the payoff came in the rendering time, which Mental Ray crushed at less than a second per frame in full HD.</p>
+								<p>We wanted the video to feel like a one take shot where the camera never stops moving and only speeds up during transitions. It would have been almost impossible to build everything in the same 3D composition since the video constantly switches in scale from a skyscraper to a pack of cigarettes, then right back up again so I developed my own system for blending the scenes together. I'd render a few frames of the end of one scene, then overlay the video on top of my 3D viewport for the next scene. By synching the timelines I could scrub both at once and make adjustments in realtime similar to a disney animator lifting and covering the previous page as they draw on the next one.</p>
+								<p>The result was incredibly smooth transitions and a feeling of constant motion throughout the piece.</p>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="dot" data-model="models/cube.js" data-foreground="179,204,199" data-background="200,220,215">
+				<div class="item design" id="3dDesign">
+					<div class="title">
+						<h1 data-plus-offset="62">3D Design</h1>
+						<h2>Upward, not Northward<br><i>-Edwin Abbott, Flatland</i></h2>
+					</div>
+					<div class="content">
+						<div class="project openProject">
+							<div class="vimeo">
+								<iframe src="https://player.vimeo.com/video/138542988" frameborder ="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+							<div class="info openInfo">
+								<h1>2015 3D Design Reel</h1>
+								<p>Some recent 3D work, I've had a good mix of organic and architectural projects which allow me to work with a great variety of models, lighting setups, materials and rendering techniques. I've worked in Blender, Maya, Cinema 4D but prefer and have the most experience in 3DS Max.</p>
+								<p>I'm practiced in modeling, texturing, lighting and rendering and have attempt to get as close to a final image from within the camera as a photographer would. I still use After Effects and Photoshop to make minor adjustments in post but prefer to let the rendering do most of the work. I'm also a procedural freak and am constantly writing scripts to simplify modeling, animation and rendering. I've also built and used a few render farms as well as using some of the online services in order to speed up long animation sequences.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="dot" data-model="models/shirt.js" data-foreground="240,240,240" data-background="237,173,120">
+				<div class="item design" id="Print">
+					
+					<div class="title">
+						<h1 data-plus-offset="83">Print</h1>
+						<h2>Creating is the essense of life<br><i>-Julius Caesar</i></h2>
+					</div>
+
+					<div class="content">
+
+						<div class="project" id="TapHandle">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/beertap2.jpg" alt="3D printed beer tap" src="images/placeholder.png">
+								<img class="lazy" data-original="images/beertap1.jpg" alt="3D printed beer tap" src="images/placeholder.png">
+							</div>
+							
+							<div class="info">
+								<h1>3D Printed Keg taphandle</h1>
+								<p>I learned a thing or two about kegs in college so it usually falls on me to manage our office's kegerator. This transitioned into me becoming the resident beer sommalier. A fun job to pick the beer for over 250 people on a bi-weekly basis. Occasionally the kegs would be delivered with fancy tap handles emblazoned with the breweries logo or mascot. There were plenty of times, however, that they did not and we were left with a dinky plastic cylinder.</p>
+								<p>That's when I opened up 3DS Max and got to work. I actually started by pulling one of the larger handle's we received and taking some precise measurements. Designing the handle would be no sweat, but creating a threaded cavity that would accept the bolt from the tap's stem perfectly would be a challenge. Especially with the range of 3D materials available now and the variety of tolerances at which different shops print to.</p>
+								<p>I came up with a few different designs, eventually landing on a simple, matte-black handle about 8" long and .5" in diameter. I bought my own bolt at a hardware store that I planned on threading through the length of the handle before connecting up with the stem, however the material I chose had some flexability to it and was able to grab the existing bolt and hold pretty tightly.</p>
+								<p>I used <a href="http://www.shapeways.com" target="_blank">ShapeWays.com</a> to do the printing and was impressed with their website, customer service, and sheer speed of production. Less than 2 weeks from submission to receiving a package via UPS. The quality was really good and actually showed me that I could've diveded my polygons even further, however I don't mind the edged feel it lent to the cylinder</p>
+							</div>
+						</div>
+
+						<div class="project" id="Knockout">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/knockout1.jpg" alt="'Mama said knock you out!' onesie" src="images/placeholder.png">
+								<img class="lazy" data-original="images/racetee1.jpg" alt="JP Morgan Corporate Challenge Race Tee Shirt 2014" src="images/placeholder.png">
+								<img class="lazy" data-original="images/racetee2.jpg" alt="JP Morgan Corporate Challenge Race Tee Shirt 2013" src="images/placeholder.png">
+								<img class="lazy" data-original="images/marksgirlstee1.jpg" alt="Mark's Girls Tee" src="images/placeholder.png">
+								<img class="lazy" data-original="images/marksgirlstee2.jpg" alt="Mark's Girls Tee" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Tee Shirt design and printing</h1>
+								<p>I like making shirts because it's a way of wearing your own artwork. I've designed jerseys, team shirts, shirts for events or even just for fun.</p>
+								<p>Usually I do simple heat-transfer prints but for longer lasting shirts there are several local screenprinters that aren't too expensive for small orders.</p>
+							</div>
+						</div>
+
+						<div class="project" id="FamilyTree">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/famtree1.jpg" alt="Seidman family tree" src="images/placeholder.png">
+								<img class="lazy" data-original="images/famtree2.jpg" alt="Seidman family tree" src="images/placeholder.png">
+							</div>
+							<div class="info">							
+								<h1>Family Tree, fabric and wood</h1>
+								<p>I came up with this project as a gift for my grandfather's 90th birthday. I went to a local art supply store without much of a plan. I chose a nice peice of soft canvas material for the backing so that the tree could be rolled up and easily transported. They had very nice paper that worked well for leaves and a some very thin sheets made out of super thin slices of wood. Some craft glue, iron-on print sheets and a little Photoshop work took care of the rest.</p>
+							</div>
+						</div>
+
+						<!-- <div class="project" id="RaceTee">
+							<div class="imgScroller">						
+								<img class="lazy" data-original="images/racetee1.jpg">
+								<img class="lazy" data-original="images/racetee2.jpg">
+							</div>
+							<div class="info">
+								<h1>JP Morgan Chase 5k Race Tee</h1>
+								<p>Every year BGB participates in the JP Morgan Corporate Challenge which is a fun 5K run in central park with the proceeds going to help keep the park a beutiful oasis in an otherwise grimy metropolis. We design team shirts every year to wear together while running. This is a clean one, however after the sweat from running in the heat of July, the stains from the hot wings and fish bowls from Brother Jimmy's after party, they usually look a lot worse. Despite (or possibly due to) this raunchiness, the annual race has always been a great bonding event and a good excuse for some friendly, interoffice smacktalk via email.</p>
+							</div>
+						</div> -->
+
+						<div class="project" id="WeddingRings">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/rings1.jpg" alt="Wedding band shadow" src="images/placeholder.png">
+								<img class="lazy" data-original="images/rings2.jpg" alt="Wedding band shadow" src="images/placeholder.png">
+								<img class="lazy" data-original="images/rings3.jpg" alt="Wedding band shadow" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Shadow Wedding Bands</h1>
+								<p>After seeing the amazing work of THIS GUY, I knew I needed to step my ring game up. After sporting a plain white gold band for almost 6 years that falls off in the winter and feels three sizes too small in the summer I finally switched. I asked around with some friends I have that make jewelry but it seemed like the projection idea was just too tricky, too delicate and wouldn't last more than a year. After much thought, I landed on shadows as the perfect medium to explore and exploit.</p>
+								<p>By setting up a simple composition in 3DS Max with a band, a point light, and a surface to catch the shadow and began modeling. I decided to make the image in positive, then use it as a cutter and combined it with the bands using a subtractive boolean operator. In the render pictured here you can <i>see</i> my wifes face carved out of one side of the ring, and mine the other. When wearing it, you can't tell that it's anything more than an interesting pattern, but, hold it up to a light, or a candle or even your phone's flashlight and it creates a perfect image that I'll always be able to project as long as I have some light handy.</p>
+							</div>
+						</div>
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+					</div>
+				</div>
+			</div>			
+
+
+			<div class="dot" data-model="models/sphere.js" data-foreground="38,38,38" data-background="240,240,240">
+				<div class="item intro" id="home2">					
+					<h1>Digital Designer / Developer</h1>
+					<span class="therest">
+						<a class="prevButton" href="#design"><img src="images/prevArrow.png">DESIGN PROJECTS</a>
+						<a class="nextButton" href="#dev">DEV PROJECTS<img src="images/nextArrow.png"></a> 
+					</span>
+				</div>
+			</div> 
+
+
+			<div class="dot" data-model="models/hammer.js" data-foreground="170,160,170" data-background="153,160,160">
+				<div class="item dev" id="AppsAndBuilds">
+					<div class="title">
+						<h1 data-plus-offset="40">Apps &amp; Builds</h1>
+						<h2>I want to put a ding in the universe.<br><i>-Steve Jobs</i></h2>
+					</div>
+					<div class="content">
+
+						<div class="project" id="Calendar">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/calendar.jpg" alt="Resolution Calendar App" src="images/placeholder.png">
+								<img class="lazy" data-original="images/calendar.jpg" alt="Resolution Calendar App" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Resolution Calendar App</h1>
+								<p>This project was entirely personal since I didn't setup a username/password login but since it was pretty successful for me, maybe I'll open it up to the public around the new year.</p>
+								<p>My idea was to accomplish a <i>few, small</i> resolutions over the course of 2015. I decided I wanted to drink less coffee, exercise more, and floss every day. I mimicked a system my friend was using that worked well for him. He was trying to lose weight so every day that he stayed under his calorie limit, he added a sticker to his calendar. Seeing the stickers add up seemed to fuel his motivation. He achieved his goals for each month and lost the weight he wanted.</p>
+								<p>My concept was very similar: set a few resolutions, click on the day to add or remove the "sticker", then challenge myself to fill out each month. The fun part of this project was coding a backend in PHP and MySQL that could live update from anywhere asynchronously. By using sockets I'm able to push data to the client at will so updates happen live if you're viewing on multiple devices and it never loses sync.</p>
+							</div>
+						</div>
+
+						<div class="project" id="TranslateTelephone">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/telephone.jpg" alt="Funny Picture of man with tin can phone" src="images/placeholder.png">
+								<img class="lazy" data-original="images/telephone.jpg" alt="Funny Picture of man with tin can phone" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Google Translate Telephone <a class="extLink" href="http://telephone.daveseidman.com/" target="_blank"><img src="images/linkIcon.png"></a></h1>
+								<p>This was a demo I put together to demonstrate what happens when a phrase is run through google translate again and again. The simple demo allows you to use a word or phrase as input. It then uses the Google translate API to rapidly translate it to a random language, then sends the result back in as the input and repeats the process as many times as you specify. At the end, it translates back to the original language, usually in a somewhat butchered, often hilarious, form.</p>
+							</div>
+						</div>
+
+						<div class="project" id="RenderFarm">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/renderfarm1.jpg" alt="render farm for 3ds max and after effects" src="images/placeholder.png">
+								<img class="lazy" data-original="images/renderfarm3.jpg" alt="render farm for 3ds max and after effects" src="images/placeholder.png">
+								<img class="lazy" data-original="images/renderfarm4.jpg" alt="render farm for 3ds max and after effects" src="images/placeholder.png">
+								<img class="lazy" data-original="images/renderfarm2.jpg" alt="using networked computers to display synched video" src="images/placeholder.png">
+								<img class="lazy" data-original="images/renderfarm5.jpg" alt="using networked computers to display synched video" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Render Farming</h1>
+								<p>I've built and used many render farms for both backburner and vray distributed networking across close networks and even tunneled through the internet. Typically I use PCs but Macs work fine as well. The easiest method is to keep the machines offline but connected via a local switch and assign each a static IP.</p>
+								<p>I use a VNC client to manage them as well so there's no need for any machine to have an input device. Once I'm happy with the setup of a particular machine it's subsequently "ghosted" across the rest of the network so that all the others are identical to it in every way except for it's name and IP address.</p>
+								<p>I also occasionally use the setups with screens as a digital billboard, running video seamlessly across the screens.</p>
+							</div>
+						</div>
+
+						<div class="project" id="LeapMotion">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/leapmotion1.jpg" alt="leapMotion controller" src="images/placeholder.png">
+								<img class="lazy" data-original="images/leapmotion2.jpg" alt="leapMotion controller" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Leap Motion Experiments</h1>
+								<p>My director at my last job turned me on to Leap Motion while it was still in it's beta phase. We got a couple of the first ones they made and got straight to playing-er, I mean, working- with them. The SDK has come a long way since the original release but even back then I was able to create a few demos of rotating human organs in 3D space. Swiping through presentations with hand gestures.</p>
+							</div>
+						</div>
+		
+						<div class="project" id="Cardboard">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/cardboard1.jpg" alt="google cardboard" src="images/placeholder.png">
+								<img class="lazy" data-original="images/cardboard1.jpg" alt="google cardboard" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Google Cardboard</h1>
+								<p>I purchased one of these kits as soon as they came out. I think it's a great way to put VR in the hands of anyone that's interested in it.</p>
+								<p>I developed a small demo here: [link] that shows the inside of a liver with some animations of drugs interacting with proteins in the bloodstream.</p>
+								<p>I created the assets in 3DS Max and exported them as .js files to animate in THREE.js. I used the DeviceOrientation class and splitcanvas renderer to send a different 3d image to each eye.</p>
+							</div>
+						</div>
+
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="dot" data-model="models/trophy.js" data-foreground="244,207,10" data-background="213,159,234">
+				<div class="item dev" id="Events">
+					<div class="title">
+						<h1 data-plus-offset="75">Events</h1>
+						<h2>All mass is interaction.<br><i>-Richard Feynman</i></h2>
+					</div>
+					<div class="content">
+
+						<div class="project" id="Moxie">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/moxie1.jpg" alt="Shower Out Loud!" src="images/placeholder.png">
+								<img class="lazy" data-original="images/moxie2.jpg" alt="Moxie paired with iPhone" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Interactive Kiosk: Kohler's Moxie</h1>
+								<p>Kohler's singing showerhead, this device is battery powered, usb-chargeable, bluetooth connectivity, and magnetically held in place in the middle of hundreds of precisely angled jets inside a modern showerhead. For their tradeshow booth, Kohler created an actual shower stall (without plumbing) and asked me to create an interactive experience to show off the showerhead's features. I created a "Virtual Mirror" by mounting a webcam above a bright touchscreen monitor and wrote a fullscreen flash application that would run on a Mac Mini hidden behind the stall. The result was part photo/booth, part DJ station, part contest giveaway.</p>
+								<p>The sound quality was the feature Kohler wanted to show off the most, so instead of just playing a few stock music tracks, I interfaced with Grooveshark's API and purchased a plan with them allowing users to search and play any track they wanted. The acoustics from the device and reverberating off the tiles in the shower stall were amazing.</p>
+								<p>The photo booth worked by integrating the webcam in flash with the screen rotated to portrait and adding a few different user-selected overlays on top of the live video. When visitors were ready, they hit a button that counted down, then snapped their photo. I then presented them with the option to retake, email, or post the photo directly to facebook (with Kohler's branding a links). This required some heavy coding on the backend to interface with Facebook's API. Their oAuth screen needed a separate window which had to be carefully positioned and restricted so that the user couldn't use the kiosk to start browsing the internet. I also created a custom onscreen keyboard to match the program's style that allowed users to enter their login information easily. It seems like a simple task but I a lot of clunky on-screen keyboards at tradeshows and in-store kiosks. I worked hard to make sure mine was as simple, yet powerful as possible.</p>
+								<p>The giveaway contest portion of the booth proved challenging to give away a good amount of prizes when all you know is how many prizes you're starting with and how long the contest will run for. The <i>amount of times</i> the contest will be played or the <i>frequency</i> at which it's played was the x factor. It's a non-linear equation with that does its best to give away enough prizes to get the crowd excited, but not too many that they run out of prizes too early.</p>
+							</div>
+						</div>
+
+						<!-- <div class="project" id="Numi">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/numi.jpg">
+								<img class="lazy" data-original="images/numi4.jpg">
+								<img class="lazy" data-original="images/numi1.jpg">
+								<img class="lazy" data-original="images/numi2.jpg">
+								<img class="lazy" data-original="images/numi3.jpg">
+							</div>							
+							<div class="info">
+								<h1>Interactive Kiosk: Kohler Numi</h1>
+								<p>I have a lot of respect for Kohler's modern design esthetic. When building an interactive Kiosk for their latest toilet (Yes, that's a picture of a toilet), I focused on smooth lines, and clean layouts. Minimal text and nice imagery were key in making this program so beautiful.</p>
+							</div>
+						</div> -->
+
+						<div class="project" id="Wired">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/wired2.jpg" alt="The Wired Popup Store, SoHo" src="images/placeholder.png">
+								<img class="lazy" data-original="images/wired1.jpg" alt="QuestLove DJing at Wired Store opening party" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>WIRED Popup Store Kiosk</h1>
+								<p>Working with Kohler gave me the opportunity to have an interactive kiosk at the WIRED popup store in SoHo, NYC. They also invited me to the opening ceremony which was a pretty great party with lots of celebrities and DJ'd by one of my favorite drummers, QuestLove.</p>
+								<p>Our kiosk gave users a chance to experience Kohler's latest product, Moxie, that wireless streams your music from the actual showerhead.</p>
+								<p>We showed off its features by mounting it inside an actual shower and running a touchscreen display right behind that simulated a virtual mirror. It leveraged the Grooveshark API which let users play their favorite music or radio straight from the showerhead. We also created some custom video effects on top of live webcam feed that added filters and graphics on top of users faces. They could also snap stills which they could then email, tweet or post directly to facebook, right from the kiosk.</p>
+							</div>
+						</div>
+
+						<div class="project" id="CES">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/ces1.jpg" alt="CES" src="images/placeholder.png">
+								<img class="lazy" data-original="images/ces2.jpg" alt="CES" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Tradeshow Booth for LG</h1>
+								<p>LG designed a video wall with over 20 brand new 60" HD TVs for the Consumer Electronics Show in Las Vegas in 2008. They wanted the wall to be tightly integrated with a fasion show that was happening on the stage and allowed for the models to walk out from between the 30' tall stacks of monitors.</p>
+								<p>We figured out how to wire them all up and push synchronized using software called <a href="http://www.dataton.com/watchout" target="_blank">Watchout.</a> We networked 12 powerful shuttle computers, each carrying a lot of cores and a heavy duty graphics card. All the source media (video, images, soundtracks, etc.) was cached on each machine including an extra machine reserved for orchestrating the others over hi-speed internet cable.</p>
+								<p>Testing began at our office in Manhattan with much smaller screens and some standard shelving units that allowed us to shift screens around at a moments notice as design comps were updated. I also needed to update my After Effects compositions as well to match new layouts. I was able to keep my video canvas, more or less the same size/shape and just update the "windows" that I would eventually use to crop it and render it. Each of these "windows" corresponded to the relative size and position of a screen on our wall and by carefully setting up a render queue I could render out updated videos for every screen with one click.</p>
+								<p>In early testing phases we also simply pointed a projector at the blank screens and played HD video on them just to see how it looked when being cropped into the different shapes by the arrangement of screens.</p>
+							</div>
+						</div>
+						<div class="project" id="TouchlessFlush">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/touchless1.jpg" alt="touchless">
+								<img class="lazy" data-original="images/touchless2.jpg" alt="touchless">
+							</div>
+							<div class="info">
+								<h1>Kohler touchless flush system</h1>
+								<p>This was an interactive kiosk that was used in tradeshows as well as an in stores next to the actual product. The device itself is about the size of small brick and clips inside most toilets, replacing the flusher with a motion sensor allowing you to simply wave your hand above the tank to flush.</p>
+								<p>The program featured a some intallation instructions, a few videos provided by Kohler, and a giveaway that lets users spin a slot machine style game by waving their hand over a display toilet.</p>
+								<p>Kohler provided me with an actual device modified to send a signal over USB at the same time it flushes the demo toilet. I used some lower level scripting to route the signal as input into my Actionscript based App which would then spin the slot machine's wheels.</p>
+								<p>Some future updates I'd like to build for this would be to have the screen react with some intense video and audio when a user touches it to reinforce the touchless aspect of Kohler's system. The program would then instruct them to simply wave their hand over the button or option they want to select, which I would capture using a Leap Motion sensor mounted at the base of the screen.</p>
+							</div>
+
+						</div>
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="dot" data-model="models/bug.js" data-foreground="204,51,51" data-background="201,134,134">
+				<div class="item dev" id="BugCam">
+					<div class="title">
+						<h1 data-plus-offset="62">BugCam!</h1>
+						<h2>Homemade, Raspberry Pi Baby Cam</h2>
+						<span class="featured">FEATURED PROJECT</span>
+					</div>
+					<div class="content">
+						<div class="project openProject" id="HowItsMade">
+							<div class="imgScroller openImgScroller">
+								<img class="lazy" data-original="images/bugcam2.jpg" src="images/placeholder.png">
+								<img class="lazy" data-original="images/bugcam1.jpg" src="images/placeholder.png">
+								<img class="lazy" data-original="images/philippe1.jpg" src="images/placeholder.png">
+							</div>
+							<div class="info openInfo">
+								<h1>How it's made</h1>
+								<p>Necessity was the mother of this invention. Needing a way to keep an eye on our new little "bug", I told my wife not to buy an expensive baby monitor, instead I built my own using a Raspberry Pi.</p>
+								<p>Starting with a hollowed out night-light, I added a Raspberry Pi, and miniature camera module, a WiFi card and a light sensor. I found a few <a href="http://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android" target="_blank">good tutorials</a> that get the Pi to use FFMPEG to stream the video over an open port on the Pi. I then adjusted my home router's settings to forward that port out to the world so I could continue keeping an eye on our baby while at work or out of the house. This only works, however if you know your home's IP address at all times and most ISP's will renew your IP address every couple of weeks. So I wrote a script on the PI that runs every 15 minutes to check the home's IP and report it to my webserver, which keeps it updated on it's end.</p>
+								<p>Some finishing touches were to make the whole package boot up, connect to the internet, and start pushing the video stream as soon as it was connected to a power source.</p>
+								<p>Future modifications will include a light-sensor, motion-sensing (image-based), infrared camera and microphone.</p>
+							</div>
+						</div>
+				
+					</div>
+				</div>
+			</div>
+
+			<div class="dot" data-model="models/bulb.js" data-foreground="241,239,30" data-background="240,235,166">
+				<div class="item dev" id="BrightIdeas">
+					<div class="title">
+						<h1 data-plus-offset="48">Bright Ideas</h1>
+						<h2>The greatest virtue of man is perhaps curiosity.<br><i>-Anatole France</i></h2>
+					</div>
+					<div class="content">
+
+						<div class="project" id="Riven">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/riven3.jpg" alt="riven, adventure game preserved in wooden box" src="images/placeholder.png">
+								<img class="lazy" data-original="images/riven1.jpg" alt="riven, adventure game preserved in wooden box" src="images/placeholder.png">
+								<img class="lazy" data-original="images/riven2.jpg" alt="riven, adventure game preserved in wooden box" src="images/placeholder.png">
+								<img class="lazy" data-original="images/riven4.jpg" alt="riven, adventure game preserved in wooden box" src="images/placeholder.png">
+								<img class="lazy" data-original="images/riven5.jpg" alt="riven, adventure game preserved in wooden box" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Riven, Forever.</h1>
+								<p>The sequel to Myst, was a great adventure game and so far ahead of its time but even though it's been ported to an app I wanted to preserve it in a physical form as well.</p>
+								<p>I started with a Dell Mini 100 Laptop and <i>downgraded</i> the OS to Windows 95. Then I moved the games source files to the hard disk since the machine didn't have a DVD drive and modified the source code so that it looked to a folder on the disk instead of constantly asking the user to switch between the game's 5 DVDs. I also set it to hide the Windows and DOS boot screens and boot straight into the game at fullscreen.</p>
+								<p>I then found a medium sized wooden box, a trackball for navigation, and an old looking notebook and pen since the game is so complex, you end up making lots of notes in order to get past the puzzles embedded in the island.</p>
+							</div>
+						</div>
+
+						<div class="project" id="HearthShare">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/hearth1.jpg" alt="fireplace" src="images/placeholder.png">
+								<img class="lazy" data-original="images/hearth2.jpg" alt="fireplace" src="images/placeholder.png">
+							</div>
+							<div class="info">
+							<h1>Hearth Share</h1>
+							<p>This idea came to me when looking for the all-day yule log channel that comes on around the holidays. It struck me that by now a lot of people have a Chromecast or Apple TV that would allow for a fireplace to be streamed from the internet instead of cable.</p>
+							<p>Working with the Vimeo and Dropbox API, I created a simple web app that allows visitors to stream a vimeo collection of fireplaces straight to their tv on infinite loop. However, instead of just watching one fire for hours on end, my app used 2 minute maximum clips from many different fireplaces all over the world. I also added a simple way for users to upload their own fireplace directly through the website. Using their webcams or smartphones, the videos would be uploaded to my Dropbox account and automatically pulled into my Vimeo account along with the users name and location.</p>
+							<p>It worked surprisingly well but I didn't publicize it so there were only a few fireplaces that myself and a few friends uploaded. I think there's a lot of potential to tie this in with a charity such as <a href="http://www.citizensenergy.com/assistance-programs/joe-4-oil" target="_blank">Joe-4-Oil</a> which provides heating oil to people in need. I could add a small "donate now" button in the corner that would allow people to bring actual warmth to people in need during the winter months.</p>
+							
+							</div>
+						</div>
+
+						<!-- <div class="project" id="MapRacer">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/mapRacer.jpg">
+								<img class="lazy" data-original="images/mapRacer.jpg">
+							</div>
+							<div class="info">
+								<h1>Google Maps Racer</h1>
+								<p>A simple swipe-racing game for google maps.</p>
+								<p>Gameplay is as simple as following a path. Sounds simple, but try swiping faster and faster and then coming up on a quick right or hairpin left turn. The faster you go the easier it is to lose your way, and the farther you stray from that familiar blue line, the harder it is to get back!</p>
+							</div>
+						</div> -->
+
+						<div class="project" id="KinectPostureCorrector">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/kinectcam1.jpg" alt="Microsoft's Kinect sensor" src="images/placeholder.png">
+								<img class="lazy" data-original="images/posture2.jpg" alt="posture example xray" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Kinect Posture Corrector</h1>
+								<p>This is an experiment to see if I could improve my posture in very passive way. I plan to moutn a Kinect sensor a few feet away from my office chair and off to one side. By using Microsoft's seated skeletal tracking algorithm I'll give myself a "posture score" to dim and brighten my screen depending on how upright I'm sitting. The program will then brighten and darken the screen by adjusting the opacity of a fullscreen black box rendered with Flash and Adobe AIR which allows me to position it above all other windows without blocking the mouse or touch events.</p>
+								<p>The program will also continually record scores so that I can monitor how good my posture is throughout the day. This would allow the program to identify patterns, such as the after lunch slump, and offer suggestions such as a cup of coffee at just the right moment to bring my spine back into alignment.</p>
+								<p>If others are interested in this I could probably deploy it as a simple app, however it would still require a Kinect sensor and a little bit of calibration before use.</p>
+								<!-- <p>The end result was usually a very dark screen but possibly a slight improvement in my posture</p>
+								<p>If anyone's interested in trying at home I'll post the code here: [link]. It used a Flash implementation of the Kinect SDK and a simple fullscreen black box that overlays the dekstop and allows click events to pass straight through it.</p> -->
+							</div>
+						</div>
+
+						<!-- <div class="project" id="MajorCSS">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/majorcss1.jpg">
+								<img class="lazy" data-original="images/majorcss2.jpg">
+							</div>
+							<div class="info">
+								<h1>Major CSS</h1>
+								<p>This is a website similar to CodePen.io, but focused specifically on css text styling. An online resource for anyone wanting to quickly use some amazing text effects. Becoming a site user also allows your to vote for and upload your own styles.</p>
+								<p>The styles make use of CSS3 so this would be for modern browsers only.</p>
+							</div>
+						</div> -->
+
+						<div class="project" id="StreetViewNight">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/streetviewnight1.jpg" alt="street view night vs day comparison" src="images/placeholder.png">
+								<img class="lazy" data-original="images/streetviewnight2.jpg" alt="street view night vs day comparison" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Streetview Night-Mode</h1>
+								<p>Living in a sprawling metropolis, this is a feature I've been waiting on for a while... c'mon Google! I think most of us New Yorkers have been in the situation where they can't find a bar or restaurant they only saw once during the day. Streets in cities can look drastically different during the day compared to night, so I'm hopeful that Google is considering adding night imagery in to their Maps API in the near future.</p> 
+								<p>I don't see it being too much of a technical hurdle, just a matter of google driving some of their <a href="http://www.google.com/maps/about/behind-the-scenes/streetview/" target="_blank">Street View Cars</a> around the city at night. On top of the practical aspect, I'd just like to see what some cities look like at night. The only difficulty may be the automatic stitching of photos may be thrown off by the bright lights of night.</p>
+								<p><b>Update:</b> Shanghai is already trying this: <a href="http://map.qq.com/#pano=10022006120801222421200&heading=46&pitch=-1&zoom=1" target="_blank">sort of.</a></p>
+							</div>
+						</div>
+						
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="dot" data-model="models/house.js" data-foreground="51,153,102" data-background="179,217,230">
+				<div class="item dev" id="WebDesign">
+					<div class="title">
+						<h1 data-plus-offset="55">Web Design</h1>
+						<h2>Design is everything. Everything!<br><i>-Paul Rand</i></h2>
+
+					</div>
+					<div class="content">
+						
+						<div class="project" id="WeddingWebsite">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/wedding1.jpg" alt="screenshot of zooming website" src="images/placeholder.png">
+								<img class="lazy" data-original="images/wedding2.jpg" alt="screenshot of zooming website" src="images/placeholder.png">
+								<img class="lazy" data-original="images/wedding3.jpg" alt="screenshot of zooming website" src="images/placeholder.png">
+								<img class="lazy" data-original="images/wedding4.jpg" alt="screenshot of zooming website" src="images/placeholder.png">							
+							</div>
+							<div class="info">
+								<h1>Wedding Website <a class="extLink" href="http://daveandchrystelle.com" target="_blank"><img src="images/linkIcon.png"></a></h1>							
+								<p>I discovered Microsoft's Deep Zoom software after watching Blaise Arcas <a href="https://www.ted.com/talks/blaise_aguera_y_arcas_demos_photosynth" target="_blank">Ted Talk</a>. Once I saw there was a javascript implementation I spent the next day learning it and the day after figuring out its limitations. I found that I could create a canvas about 30,000 pixels wide and 15,000 pixels tall before Deep Zoom would crash while trying to create the image tiles.</p>
+								<p>I relied heavily on Adobe Illustrator for it's ability to handle billions (literally) of pixels without breaking a sweat. I rendered the final image with Photoshop using it's PSB format, specifically designed for large canvases. Deep Zoom then slowly churned out the 6,400+ tiles and the code needed to seamlessly zoom through them.</p>
+								<p>I modified the code a little to allow for links that move along with the image but remain at the same scale so that I could link people directly to a section of the larger image.</p>
+							</div>
+						</div>
+
+						<div class="project" id="JonSandler">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/jonsandler1.jpg" alt="video page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/jonsandler2.jpg" alt="video page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/jonsandler3.jpg" alt="video page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/jonsandler4.jpg" alt="video page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/jonsandler5.jpg" alt="video page" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Jon Sandler - Nowhere Bound <a class="extLink" href="http://jonsandler.com/nwb/" target="_blank"><img src="images/linkIcon.png"></a></h1>
+								<p>Working with the lead singer/songwriter I created a video concept for the album's title track, "Nowhere Bound".  The theme, "Nowhere bound" sent the lead singer walking through various locations while a DP filmed him from a dolly and track that we moved along with him. We scouted several locations throughout the city, then manipulated the footage to seem like even more.</p>
+								<p>The shoot took place in 10 different locations and we were able to film it all in a single day. We used a crew of 4 to speed the setup and breakdown at each location. I smoothed all the footage and locked the star in the same location in every frame. I used 3DS Max and After Effects to add 3D elements, do color correction and add other effects.</p>
+								<p>I built out the site entirely in Flash and AS3 and it took a couple weeks for the layout to come together. I started by wrapping the artist with the main navigation in the center. There's also a "scene selector pulldown" from the top and some social media links at the bottom.</p>
+								<p>The final site loaded quickly and played back smooth. We looked into an HTML version but up until the advent of the canvas object, it was impossible to play videos with transparency in the browser with anything other than Flash and we wanted to be able to switch between videos at random with interesting transitions.</p>
+								<p>The site went on to receive lots of praise and was shortlisted at <a href="http://thefwa.com" target="_blank">thefwa.com.</a></p>
+							</div>
+						</div>
+					
+						<div class="project" id="OldPortfolio">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/oldportfolio1.jpg" alt="intro" src="images/placeholder.png">
+								<img class="lazy" data-original="images/oldportfolio2.jpg" alt="usb keys falling in" src="images/placeholder.png">
+								<img class="lazy" data-original="images/oldportfolio3.jpg" alt="displaying reel" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>DaveSeidman.com 1.0 <a class="extLink" href="http://daveseidman.com/v1" target="_blank"><img src="images/linkIcon.png"></a></h1>
+								<p>This was my previous portfolio website lauched in 2007. It leveraged the Box2D Physics engine in ActionScript so that users could play with a pile of USB keys. Each of the keys "contained" a project or reel that would play on the monitor in the background when the user plugged them in</p>
+								<p>This site got such a great response, even several years after launch. It was very playful in it's interactivity and colorful design.</p>
+								<p>The metaphor of the USB key was very relevant at the time as most designers were using them to share their portfolios.</p>
+							</div>
+						</div>
+
+						<div class="project" id="LubyAndScott">
+							<div class="imgScroller">
+								<img class="lazy" data-original="images/lubyscott1.jpg" alt="screenshot of cover page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/lubyscott2.jpg" alt="screenshot of about us page" src="images/placeholder.png">
+								<img class="lazy" data-original="images/lubyscott3.jpg" alt="screenshot of information page" src="images/placeholder.png">
+							</div>
+							<div class="info">
+								<h1>Luby and Scott's Wedding <a class="extLink" href="http://lubyandscott.com" target="_blank"><img src="images/linkIcon.png"></a></h1>
+								<p>I've known Luby and Scott for a while now and had the priveledge of being their best man <i>and</i> their webmaster.</p>
+								<p>They had very nice photography so I went with lots of open space and let the photos lead the design. The only real graphic element I introduced was a circle, which fit nicely with their volleyball theme.</p>
+								<p>It's fully responsive with layouts designed for extra large screens all the way down to small phone screens.</p>
+								<p>A nice-to-have which was never added was the ability of the user to "draw" in the sand on the homescreen via an html5 canvas element. This wouldn't only be a fun interaction, mouse and touch movement would be recorded and saved to a database on the backend so the couple or anyone else visiting the site could see other's messages as well as create their own.</p>
+							</div>
+						</div>
+
+						<div class="project spacer"></div>
+						<div class="project spacer"></div>
+
+					</div>
+				</div>
+			</div>	
+
+		</div>
+
+	</div>
+
+	<div class="vignette"></div>
+
+	<div class="header">
+		<a href="#home">Dave Seidman</a>
+		<span class="category"><p>/&nbsp;DEV</p></span>
+		<span class="category"><p>/&nbsp;DESIGN</p></span>
+	</div>
+	<div class="footer" class="noselect">
+		<div class="nav">
+			<a id="about" href="#about">About</a> 
+			<a id="credits" href="#credits">Credits</a>
+			<a id="resume" href="resume.pdf" target="_blank">Resume</a>
+		</div>
+
+		<div class="footerContent">
+
+			<div id="about">
+				<span>
+					<h1>Elegant Digital Storytelling</h1>
+					<p>Dave Seidman is a motion graphics designer, front-end developer, and creative thinker. A former Flash developer; he respects fresh design and elegant code.</p>
+					<p>He enjoys spending time with family, beach volleyball, and writing in the third person.</p>
+					<p>He lives in Brooklyn with his beautiful Wife Chrystelle and rambunctious toddler Philippe.</p>
+					<p>For project or contract work inquiries please <a href="mailto:daveseidman@gmail.com?subject=Work with Seidman" target="_blank">send an email</a> with as much detail as possible.</p>
+				</span>
+				<span>
+					<img src="images/familyPhoto.jpg" style="width:100%;" alt="Family Portrait">
+				</span>
+			
+					
+
+			</div>
+			<div id="credits">
+				<span>
+					<h1>3DS Max + THREE.js + blood, sweat, tears</h1>
+					<p>Each background object was molded from the same sphere in 3DS Max and a morph vector is calculated between the corresponding vertices on each. As the carousel moves left and right, the morph amount is tweened. There is also turbulence and rotation applied to the entire mesh. The carousel in the foreground is handled with javascript and CSS and it's movement tied to pointer events.</p>
+				</span>
+				<span>
+					<h1>Inspiration</h1>
+					<p><a href="http://species-in-pieces.com/" target="_blank">Species in Pieces</a> - Beautiful composition and layout</p>
+					<p><a href="http://ecodazoo.com/" target="_blank">Ecodazoo</a> - First great use of 3D on the web</p>
+					<p><a href="https://www.chromeexperiments.com/experiment/deer-heaven" target="_blank">Deer Heaven</a> - Cool concept, nice flat shading</p>
+					<p><a href="http://zenphoton.com/" target="_blank">Zen Photon Garden</a>- Simple but beautiful blank canvas</p>
+				</span>
+				<span>
+					<h1>Frameworks</h1>
+					<p><a href="http://threejs.org" target="_blank">THREE.js</a> - WebGL and Canvas 3D rendering</p>
+					<p><a href="http://greensock.com" target="_blank">GSAP</a> - TweenMax and TimelineMax for animations</p>
+					<p><a href="https://handjs.codeplex.com/" target="_blank">Hand.js</a> - Unifies touch and mouse input</p>
+					<p><a href="https://github.com/josephg/noisejs" target="_blank">Simplex.js</a> - Simplex noise algorithm</p>
+					<p><a href="http://www.createjs.com/soundjs" target="_blank">Sound.js</a> - Audio playback</p>
+					<!-- <p><a href="http://tinypng.com" target="_blank">TinyPNG</a> - Image compression</p> -->
+				</span>
+				<span>
+					<h1>Thanks to</h1>
+					<p><a href="http://ericengworks.com" target="_blank">Eric Eng</a> - Design and layout advice</p>
+					<p><a href="http://shireenkasad.com" target="_blank">Shireen Kasad</a> - Browser and QA testing</p>
+					<p><a href="https://www.google.com/maps/place/Muse+Cafe+and+Tea/@40.6663154,-73.9851479,17z/data=!3m1!4b1!4m2!3m1!1s0x89c25ae2cd6e75d1:0x91a31daf1e26d209" target="_blank">Muse Cafe</a> - Strong Coffee + Strong WiFi</p>
+				</span>
+			</div>
+		</div>
+		<div class="footerClose"><img src="images/close.png"></div>
+	</div>
+
+	<div class="cover">
+		<div class="pushMiddle"></div>
+		Please Rotate Your Device, <i>I need more pixels!</i>
+	</div>
+	
+	<div class="debug"></div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-67271572-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</body>
+</html>
