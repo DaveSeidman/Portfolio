@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveSeidman/Portfolio.git"
+  },
+  "author": "Dave Seidman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveSeidman/Portfolio/issues"
+  },
+  "homepage": "https://github.com/DaveSeidman/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
